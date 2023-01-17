@@ -1,38 +1,69 @@
-.App {
-  text-align: center;
+/* NAVBAR */
+
+.myLogo {
+  width: 70px;
+  height: 60px;
+  border-radius: 10px;
+  cursor: pointer;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.myLogo:hover {
+  padding: 2px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.loginButton {
+  margin-left: 20px;
+  width: 4.5rem;
+  height: 2.5rem;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* LOGIN PAGE */
+
+.login {
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+  height: 100vh;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.login > h1 {
+  color: red;
+}
+
+.login > .myField {
+  width: 20rem;
+  height: 3rem;
+  outline: none;
+  border: 1px solid gray;
+  border-radius: 5px;
+}
+
+.login > input:focus {
+  border: 2px solid red;
+}
+
+.myButton {
+  background-color: blueviolet;
   color: white;
+  cursor: pointer;
+  padding: 4px 73px;
+  border-radius: 5px;
+  font-weight: bold;
 }
 
-.App-link {
-  color: #61dafb;
+/* COUNT PAGE */
+
+.countPage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  gap: 1rem;
+  flex-direction: column;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.dec {
+  margin-right: 10px;
 }
