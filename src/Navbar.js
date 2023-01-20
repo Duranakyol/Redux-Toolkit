@@ -5,6 +5,10 @@ import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import React from "react";
 import Logo from "./img/logo.jpg";
+import Logout from "./img/logout.png";
+import Profile from "./img/profile.png";
+import { BsHouseDoorFill } from "react-icons/bs";
+import { BsFillCalculatorFill } from "react-icons/bs";
 
 function MyNavbar() {
   return (
@@ -18,8 +22,12 @@ function MyNavbar() {
             style={{ maxHeight: "100px" }}
             navbarScroll
           >
-            <Nav.Link href="/">Home Page</Nav.Link>
-            <Nav.Link href="/countpage">Count Page</Nav.Link>
+            <Nav.Link className="aLink" href="/">
+              <BsHouseDoorFill className="myIcon" /> Home Page
+            </Nav.Link>
+            <Nav.Link className="aLink" href="/countpage">
+              <BsFillCalculatorFill /> Count Page
+            </Nav.Link>
           </Nav>
           <Form className="d-flex">
             <Form.Control
@@ -29,8 +37,13 @@ function MyNavbar() {
               aria-label="Search"
             />
             <Button variant="outline-success">Search</Button>
+
+            <Nav.Link href="/profile">
+              <img className="profile" src={Profile} alt="Logo" />
+            </Nav.Link>
+
             <Nav.Link href="/login">
-              <Button className="loginButton">Login</Button>
+              <img className="logout" src={Logout} alt="Logo" />
             </Nav.Link>
           </Form>
         </Navbar.Collapse>

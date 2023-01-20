@@ -11,10 +11,20 @@
   padding: 2px;
 }
 
-.loginButton {
+.myIcon {
+  margin-bottom: 3px;
+}
+
+.aLink:hover {
+  border-bottom: 1px solid red;
+}
+
+.logout,
+.profile {
+  width: 35px;
+  height: 35px;
+  background-color: transparent;
   margin-left: 20px;
-  width: 4.5rem;
-  height: 2.5rem;
 }
 
 /* LOGIN PAGE */
@@ -30,6 +40,12 @@
 
 .login > h1 {
   color: red;
+}
+
+.login > div {
+  font-size: 13px;
+  color: red;
+  margin: 0;
 }
 
 .login > .myField {
@@ -66,4 +82,17 @@
 
 .dec {
   margin-right: 10px;
+}
+
+/* HOME PAGE */
+
+.home {
+  display: block;
+  gap: 1rem;
+}
+
+.carousel {
+  width: 1000px;
+  height: 500px;
+  margin: 20px;
 }
