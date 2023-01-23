@@ -87,12 +87,326 @@
 /* HOME PAGE */
 
 .home {
-  display: block;
+  display: flex;
+  margin: 20px;
   gap: 1rem;
 }
 
+.mitte {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 900px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
 .carousel {
-  width: 1000px;
+  width: 900px;
   height: 500px;
-  margin: 20px;
+  margin-bottom: 60px;
+}
+
+.carousel > img {
+  max-width: 700px;
+  height: 350px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
+  align-items: center;
+  padding: 10px;
+}
+.card > img {
+  width: 150px;
+  height: 150px;
+}
+
+.card > .title {
+  color: red;
+}
+
+/* HOMEPAGE > LEFTSIDE */
+
+.leftSide {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 250px;
+  height: 1000px;
+  padding: 10px;
+  background-color: #ddd;
+}
+
+.leftSide > .profile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 200px;
+  height: 250px;
+  margin-right: 20px;
+  padding: 10px;
+  gap: 0.5rem;
+  background-color: #fff;
+  border-radius: 20px;
+}
+
+.profile > img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+}
+
+.profile > a {
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.leftSide > .kategories {
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+  height: 400px;
+  margin-top: 10px;
+  padding: 10px;
+  background-color: #fff;
+  border-radius: 20px;
+}
+
+.kategories > h5 {
+  color: red;
+}
+
+.kategories > a {
+  text-decoration: none;
+}
+
+.kategories > a > * {
+  margin: 5px;
+}
+
+/* HOMEPAGE > RIGHTSIDE */
+
+.rightSide {
+  display: flex;
+  justify-content: center;
+  width: 250px;
+  height: 1000px;
+  background-color: #ccc;
+}
+
+/* DOCUMENTATION */
+
+.documentation {
+  display: flex;
+  gap: 1rem;
+  margin-top: 10px;
+}
+
+.links {
+  display: flex;
+  flex-direction: column;
+  background-color: #ccc;
+  padding: 10px 60px 10px 30px;
+}
+
+.links > .kategories {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.docGettingStarted > h1 {
+  color: red;
+}
+
+.docGettingStarted > h2 {
+  color: blueviolet;
+}
+
+.docGettingStarted > .code {
+  background-color: black;
+  color: white;
+  padding: 10px;
+}
+
+.docGettingStarted > .video {
+  margin-left: 170px;
+}
+
+.docTutorialsOverview > h1 {
+  color: red;
+}
+
+.docTutorialsOverview > h2 {
+  color: blueviolet;
+}
+.docTutorialsOverview > .tip {
+  background-color: black;
+  color: white;
+}
+
+.docTutorialsOverview > .tip > div {
+  font-size: 22px;
+  color: chocolate;
+}
+
+.docTutorialsOverview > .tip > div > .icon {
+  margin: 5px 5px 10px 5px;
+}
+
+.docQuickStart > h1 {
+  color: red;
+}
+
+.docQuickStart > h2 {
+  color: blueviolet;
+}
+
+.docQuickStart > .code {
+  background-color: black;
+  color: white;
+  padding: 10px 0 10px 10px;
+}
+
+.docTypeScript > h1 {
+  color: red;
+}
+
+.docTypeScript > h2 {
+  color: blueviolet;
+}
+
+.docTypeScript > .code {
+  margin-bottom: 20px;
+}
+
+.docRtkQuery > h1 {
+  color: red;
+}
+
+.docRtkQuery > h2 {
+  color: blueviolet;
+}
+
+/* DOCUMENTATION LINKS */
+
+.links > .kategories > h4 {
+  color: red;
+}
+
+/* GETTINGSTARTED */
+
+.gettingStarted {
+  display: flex;
+  gap: 1rem;
+  margin-top: 10px;
+}
+
+.gettingStarted > div > h1 {
+  color: red;
+}
+
+.gettingStarted > div > h2 {
+  color: blueviolet;
+}
+
+.gettingStarted > div > .code {
+  background-color: black;
+  color: white;
+  padding: 10px;
+}
+
+.gettingStarted > div > .video {
+  margin-left: 170px;
+}
+
+/* TUTORIALSOVERVIEW */
+
+.tutorialsOverview {
+  display: flex;
+  gap: 1rem;
+  margin-top: 10px;
+}
+
+.tutorialsOverview > div > h1 {
+  color: red;
+}
+
+.tutorialsOverview > div > h2 {
+  color: blueviolet;
+}
+.tutorialsOverview > div > .tip {
+  background-color: black;
+  color: white;
+}
+
+.tutorialsOverview > div > .tip > div {
+  font-size: 22px;
+  color: chocolate;
+}
+
+.tutorialsOverview > div > .tip > div > .icon {
+  margin: 5px 5px 10px 5px;
+}
+
+/* QUICK START */
+
+.quickStart {
+  display: flex;
+  gap: 1rem;
+  margin-top: 10px;
+}
+
+.quickStart > div h1 {
+  color: red;
+}
+
+.quickStart > div > h2 {
+  color: blueviolet;
+}
+
+.quickStart > div > .code {
+  background-color: black;
+  color: white;
+  padding: 10px 0 10px 10px;
+}
+
+/* TYPESCRIPT */
+
+.typeScript {
+  display: flex;
+  gap: 1rem;
+  margin-top: 10px;
+}
+
+.typeScript > div > h1 {
+  color: red;
+}
+
+.typeScript > div > h2 {
+  color: blueviolet;
+}
+
+.typeScript > div > .code {
+  margin-bottom: 20px;
+}
+
+/* RTKQUERY */
+
+.rtkQuery {
+  display: flex;
+  gap: 1rem;
+  margin-top: 10px;
+}
+
+.rtkQuery > div > h1 {
+  color: red;
+}
+
+.rtkQuery > div > h2 {
+  color: blueviolet;
 }

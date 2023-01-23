@@ -9,6 +9,7 @@ import Logout from "./img/logout.png";
 import Profile from "./img/profile.png";
 import { BsHouseDoorFill } from "react-icons/bs";
 import { BsFillCalculatorFill } from "react-icons/bs";
+import { BsFillFileEarmarkTextFill } from "react-icons/bs";
 
 function MyNavbar() {
   return (
@@ -27,6 +28,9 @@ function MyNavbar() {
             </Nav.Link>
             <Nav.Link className="aLink" href="/countpage">
               <BsFillCalculatorFill /> Count Page
+            </Nav.Link>
+            <Nav.Link className="aLink" href="/documentation">
+              <BsFillFileEarmarkTextFill /> Documentation
             </Nav.Link>
           </Nav>
           <Form className="d-flex">

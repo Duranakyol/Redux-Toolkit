@@ -15,30 +15,33 @@ function CountPage() {
     dispatch(decrement());
   };
   return (
-    <div class="countPage">
+    <div>
       <MyNavbar />
-      <h1>
-        Count: <strong>{count}</strong>
-      </h1>
-      <div>
-        <button className="myButton dec" onClick={handleDecrement}>
-          Decrement
-        </button>
-        <button className="myButton inc" onClick={handleIncrement}>
-          Increment
-        </button>
+
+      <div class="countPage">
+        <h1>
+          Count: <strong>{count}</strong>
+        </h1>
+        <div>
+          <button className="myButton dec" onClick={handleDecrement}>
+            Decrement
+          </button>
+          <button className="myButton inc" onClick={handleIncrement}>
+            Increment
+          </button>
+        </div>
+
+        <br />
+        <br />
+
+        <input
+          type="number"
+          value={count}
+          onChange={(e) => {
+            dispatch(changeCount(e.target.value));
+          }}
+        />
       </div>
-
-      <br />
-      <br />
-
-      <input
-        type="number"
-        value={count}
-        onChange={(e) => {
-          dispatch(changeCount(e.target.value));
-        }}
-      />
     </div>
   );
 }
