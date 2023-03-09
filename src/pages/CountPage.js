@@ -1,7 +1,6 @@
 import React from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { decrement, increment, changeCount } from "./redux/count";
-import MyNavbar from "./Navbar";
+import { decrement, increment, changeCount } from "../redux/count";
 
 function CountPage() {
   const count = useSelector((state) => state.count);
@@ -16,8 +15,6 @@ function CountPage() {
   };
   return (
     <div>
-      <MyNavbar />
-
       <div class="countPage">
         <h1>
           Count: <strong>{count}</strong>
@@ -38,7 +35,7 @@ function CountPage() {
           type="number"
           value={count}
           onChange={(e) => {
-            dispatch(changeCount(e.target.value));
+            dispatch(changeCount(parseInt(e.target.value)));
           }}
         />
       </div>

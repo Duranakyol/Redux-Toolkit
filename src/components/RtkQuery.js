@@ -1,11 +1,9 @@
 import React from "react";
-import MyNavbar from "../Navbar";
 import DocLinks from "./DocLinks";
 
 function RtkQuery() {
   return (
     <div>
-      <MyNavbar />
       <div className="rtkQuery">
         <DocLinks />
         <div>

@@ -1,11 +1,9 @@
 import React from "react";
-import MyNavbar from "../Navbar";
 import DocLinks from "./DocLinks";
 
 function GettingStarted() {
   return (
     <div>
-      <MyNavbar />
       <div className="gettingStarted">
         <DocLinks />
         <div>

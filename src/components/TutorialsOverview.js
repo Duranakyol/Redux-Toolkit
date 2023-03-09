@@ -1,12 +1,10 @@
 import React from "react";
 import { BsFillLightbulbFill } from "react-icons/bs";
-import MyNavbar from "../Navbar";
 import DocLinks from "./DocLinks";
 
 function TutorialsOverview() {
   return (
     <div>
-      <MyNavbar />
       <div className="tutorialsOverview">
         <DocLinks />
         <div>

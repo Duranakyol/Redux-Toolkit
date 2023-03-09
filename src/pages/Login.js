@@ -1,16 +1,16 @@
 import { useDispatch, useSelector } from "react-redux";
-import { loginAction } from "./redux/auth";
+import { loginAction } from "../redux/auth";
 import { useNavigate } from "react-router-dom";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { Formik, Form, Field } from "formik";
 import * as Yup from "yup";
 
-function Signup() {
+function Login() {
   const userName = useSelector((state) => state.auth);
   const dispatch = useDispatch();
   const notify = () =>
-    toast.success("Erfolgreicher Registriert!", {
+    toast.success("Erfolgreicher Eingeloggt!", {
       position: "top-center",
       autoClose: 2000,
       hideProgressBar: false,
@@ -22,7 +22,7 @@ function Signup() {
     });
 
   const SignupSchema = Yup.object().shape({
-    username: Yup.string()
+    firstName: Yup.string()
       .min(2, "Too Short!")
       .max(50, "Too Long!")
       .required("Required"),
@@ -31,9 +31,6 @@ function Signup() {
       .max(50, "Too Long!")
       .required("Required"),
     email: Yup.string().email("Invalid email").required("Required"),
-    confirmPassword: Yup.string().when("password", (password, field) =>
-      password ? field.required().oneOf([Yup.ref("password")]) : field
-    ),
   });
 
   let navigate = useNavigate();
@@ -43,39 +40,37 @@ function Signup() {
     <div className="loginContainer">
       <Formik
         initialValues={{
-          username: "",
+          firstName: "",
           password: "",
           email: "",
-          confirmPassword: "",
         }}
         validationSchema={SignupSchema}
         onSubmit={(values) => {
           console.log(values);
           notify();
           setTimeout(() => {
-            navigate("/login");
+            navigate("/");
           }, 3000);
         }}
       >
         {({ errors, touched }) => (
           <Form action="/countpage" className="login">
-            <h1>SIGNUP</h1>
+            <h1>LOGIN</h1>
             <h2>Hi! {userName}</h2>
             <Field
               className="myField"
-              name="username"
+              name="firstName"
               placeholder="Enter your name"
               id="name"
             />
-            {errors.username && touched.username ? (
-              <div>{errors.username}</div>
+            {errors.firstName && touched.firstName ? (
+              <div>{errors.firstName}</div>
             ) : null}
             <Field
               className="myField"
-              type="email"
               name="email"
-              placeholder="Enter your Email"
-              id="email"
+              placeholder="Enter your email"
+              id="password"
             />
             {errors.email && touched.email ? <div>{errors.email}</div> : null}
             <Field
@@ -88,18 +83,8 @@ function Signup() {
             {errors.password && touched.password ? (
               <div>{errors.password}</div>
             ) : null}
-            <Field
-              className="myField"
-              name="confirmPassword"
-              type="password"
-              placeholder="Enter your confirmPassword"
-              id="confirmPassword"
-            />
-            {errors.confirmPassword && touched.confirmPassword ? (
-              <div>{errors.confirmPassword}</div>
-            ) : null}
             <span>
-              Alredy you have a Account? <a href="/login">Login</a>
+              Don't you have a Account? <a href="/signup">Signup</a>
             </span>
             <button
               className="myButton"
@@ -132,4 +117,4 @@ function Signup() {
   );
 }
 
-export default Signup;
+export default Login;

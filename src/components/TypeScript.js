@@ -1,5 +1,4 @@
 import React from "react";
-import MyNavbar from "../Navbar";
 import DocLinks from "./DocLinks";
 import Code2 from "../img/code2.png";
 import Code3 from "../img/code3.png";
@@ -7,7 +6,6 @@ import Code3 from "../img/code3.png";
 function TypeScript() {
   return (
     <div>
-      <MyNavbar />
       <div className="typeScript">
         <DocLinks />
         <div>

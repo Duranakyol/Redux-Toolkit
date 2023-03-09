@@ -1,6 +1,5 @@
 import React from "react";
 import { BsFillLightbulbFill } from "react-icons/bs";
-import MyNavbar from "../Navbar";
 import DocLinks from "./DocLinks";
 import Code from "../img/code.png";
 import Code2 from "../img/code2.png";
@@ -9,7 +8,6 @@ import Code3 from "../img/code3.png";
 function Documentation() {
   return (
     <div>
-      <MyNavbar />
       <div className="documentation">
         <DocLinks />
         <div>

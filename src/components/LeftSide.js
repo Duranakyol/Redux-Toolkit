@@ -1,5 +1,5 @@
 import React from "react";
-import ProfilePhoto from "../img/profilePhoto.png";
+import ProfilePhoto from "../assets/img/profilePhoto.png";
 import { BsArrowRightCircleFill } from "react-icons/bs";
 import { useSelector } from "react-redux";
 

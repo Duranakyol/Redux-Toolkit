@@ -1,14 +1,13 @@
 import React from "react";
-import MyNavbar from "./Navbar";
 import Carousel from "react-bootstrap/Carousel";
-import Slide1 from "./img/slide1.png";
-import Slide2 from "./img/slide2.webp";
-import Slide3 from "./img/slide3.jpeg";
-import LeftSide from "./components/LeftSide";
-import RightSide from "./components/RightSide";
-import Cards1 from "./img/cards1.png";
-import Cards2 from "./img/cards2.png";
-import Cards3 from "./img/cards3.png";
+import Slide1 from "../assets/img/slide1.png";
+import Slide2 from "../assets/img/slide2.webp";
+import Slide3 from "../assets/img/slide3.jpeg";
+import LeftSide from "../components/LeftSide";
+import RightSide from "../components/RightSide";
+import Cards1 from "../assets/img/cards1.png";
+import Cards2 from "../assets/img/cards2.png";
+import Cards3 from "../assets/img/cards3.png";
 
 import Card from "react-bootstrap/Card";
 import CardGroup from "react-bootstrap/CardGroup";
@@ -16,7 +15,6 @@ import CardGroup from "react-bootstrap/CardGroup";
 function Home() {
   return (
     <div>
-      <MyNavbar />
       <div className="home">
         <LeftSide />
         {/*<Profile ekle, documentation page olustur, our team, cardlar, adversiement */}

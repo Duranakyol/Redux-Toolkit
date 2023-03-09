@@ -1,12 +1,11 @@
 import React from "react";
-import MyNavbar from "../Navbar";
+
 import DocLinks from "./DocLinks";
 import Code from "../img/code.png";
 
 function QuickStart() {
   return (
     <div>
-      <MyNavbar />
       <div className="quickStart">
         <DocLinks />
         <div>

@@ -1,11 +1,12 @@
-import Login from "./Login";
+import Login from "./pages/Login";
+import MyNavbar from "./pages/Navbar";
 import "./App.css";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import CountPage from "./CountPage";
-import Home from "./Home";
+import CountPage from "./pages/CountPage";
+import Home from "./pages/Home";
 import "bootstrap/dist/css/bootstrap.min.css";
-import Signup from "./Signup";
-import Profile from "./Profile";
+import Signup from "./pages/Signup";
+import Profile from "./pages/Profile";
 import Documentation from "./components/Documentation";
 import GettingStarted from "./components/GettingStarted";
 import TutorialsOverview from "./components/TutorialsOverview";
@@ -17,6 +18,7 @@ function App() {
   return (
     <div>
       <Router>
+        <MyNavbar />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/login" element={<Login />} />
